@@ -3,240 +3,183 @@
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SOL-Burger Index</title>
-  <link rel="icon" type="image/png" href="https://i.postimg.cc/5yx8zDFF/Untitled-design-17.png">
+  <title>ZECT WORKERS FUND</title>
   <script src="/_sdk/element_sdk.js"></script>
   <style>
     body {
       box-sizing: border-box;
+    }
+    
+    * {
       margin: 0;
       padding: 0;
-      font-family: 'Comic Sans MS', cursive, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-      background-color: #ffffff;
-      color: #1a1a1a;
-      line-height: 1.6;
+      box-sizing: border-box;
     }
-
-    *, *::before, *::after {
-      box-sizing: inherit;
+    
+    html, body {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
     }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .header-content {
+    
+    body {
+      font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+      background-color: #f8f9fa;
+      color: #2c3e50;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 12px;
-      margin-bottom: 8px;
+      padding: 2rem;
     }
-
-    .logo {
-      width: 40px;
-      height: 40px;
-      object-fit: contain;
-    }
-
-    h1 {
-      font-size: 32px;
-      font-weight: 700;
-      margin: 0;
-      letter-spacing: -0.5px;
-    }
-
-    .subtitle {
-      font-size: 14px;
-      color: #666666;
-      font-weight: 400;
-      margin: 0;
-    }
-
-    .main-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      flex: 1;
-      min-height: 0;
-    }
-
-    .left-column {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .main-metric {
+    
+    .container {
+      max-width: 800px;
       text-align: center;
-      padding: 30px 20px;
-      background-color: #fafafa;
-      border: none;
-      border-radius: 12px;
-      flex: 1;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      background-color: #ffffff;
+      padding: 4rem 3rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid #e9ecef;
     }
-
-    .metric-value {
-      font-size: 64px;
-      font-weight: 700;
-      margin: 0 0 12px 0;
-      color: #1a1a1a;
-      letter-spacing: -2px;
+    
+    .header {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      border-bottom: 2px solid #34495e;
+      padding-bottom: 2rem;
+      width: 100%;
     }
-
-    .metric-label {
-      font-size: 16px;
-      color: #666666;
-      margin: 0 0 16px 0;
-      font-weight: 500;
+    
+    h1 {
+      font-size: 2.75rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #34495e;
+      line-height: 1.2;
     }
-
-    .metric-description {
-      font-size: 13px;
-      color: #666666;
-      margin: 0 auto;
+    
+    .subtitle {
+      font-size: 1.125rem;
+      font-weight: 400;
+      color: #7f8c8d;
+      letter-spacing: 0.01em;
       line-height: 1.5;
     }
-
-    .info-cards {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      flex: 1;
-    }
-
-    .card {
-      padding: 20px 16px;
-      border: none;
-      background-color: #fafafa;
-      border-radius: 12px;
-      flex: 1;
-    }
-
-    .card h3 {
-      font-size: 16px;
-      font-weight: 600;
-      margin: 0 0 8px 0;
-      color: #1a1a1a;
-    }
-
-    .card p {
-      font-size: 12px;
-      color: #666666;
+    
+    .main-content {
       margin: 0;
-      line-height: 1.4;
-    }
-
-    .right-column {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .chart-section {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .chart-title {
-      font-size: 18px;
-      font-weight: 600;
-      margin: 0 0 16px 0;
-      text-align: center;
-      color: #1a1a1a;
-    }
-
-    .chart-container {
-      background-color: #fafafa;
-      border: none;
-      border-radius: 12px;
-      padding: 20px;
-      flex: 1;
-      position: relative;
-      min-height: 0;
-    }
-
-    canvas {
       width: 100%;
-      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
     }
-
-    footer {
-      text-align: center;
-      padding: 16px 0;
-      border-top: none;
-      color: #999999;
-      font-size: 12px;
-      margin-top: 20px;
+    
+    .image-container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
     }
-
+    
+    #main-image {
+      max-width: 400px;
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+      border: 1px solid #e9ecef;
+    }
+    
+    .main-paragraph {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: #5d6d7e;
+      max-width: 650px;
+      font-weight: 400;
+      text-align: justify;
+      margin: 0 auto;
+    }
+    
+    .operations-section {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e9ecef;
+      width: 100%;
+    }
+    
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #34495e;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.01em;
+    }
+    
+    .operations-text {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #5d6d7e;
+      max-width: 650px;
+      font-weight: 400;
+      text-align: justify;
+      margin: 0 auto;
+    }
+    
+    .cta-button {
+      margin-top: 2rem;
+      padding: 1.125rem 3rem;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      background-color: #34495e;
+      color: #ffffff;
+      border: 2px solid #34495e;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(52, 73, 94, 0.2);
+    }
+    
+    .cta-button:hover {
+      background-color: #2c3e50;
+      border-color: #2c3e50;
+      box-shadow: 0 4px 16px rgba(52, 73, 94, 0.3);
+      transform: translateY(-1px);
+    }
+    
+    .footer {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e9ecef;
+      width: 100%;
+      font-size: 0.875rem;
+      color: #95a5a6;
+      letter-spacing: 0.01em;
+      line-height: 1.6;
+    }
+    
     @media (max-width: 768px) {
-      .container {
-        padding: 16px;
-      }
-
-      .logo {
-        width: 32px;
-        height: 32px;
-      }
-
       h1 {
-        font-size: 24px;
+        font-size: 2rem;
       }
-
-      .subtitle {
-        font-size: 12px;
+      
+      #main-image {
+        max-width: 300px;
       }
-
-      .main-content {
-        grid-template-columns: 1fr;
-        gap: 16px;
+      
+      .main-paragraph {
+        font-size: 1rem;
       }
-
-      .metric-value {
-        font-size: 48px;
-      }
-
-      .metric-label {
-        font-size: 14px;
-      }
-
-      .metric-description {
-        font-size: 11px;
-      }
-
-      .chart-title {
-        font-size: 16px;
-      }
-
-      .chart-container {
-        padding: 16px;
-      }
-
-      .card h3 {
-        font-size: 14px;
-      }
-
-      .card p {
-        font-size: 11px;
-      }
-
-      footer {
-        font-size: 10px;
-        padding: 12px 0;
+      
+      .cta-button {
+        padding: 0.875rem 2rem;
+        font-size: 0.9rem;
       }
     }
   </style>
@@ -246,330 +189,136 @@
  </head>
  <body>
   <div class="container">
-   <header>
-    <div class="header-content"><img src="https://i.postimg.cc/5yx8zDFF/Untitled-design-17.png" alt="SOL-Burger Index Logo" class="logo" onerror="this.style.display='none';">
-     <h1 id="main-title">SOL-Burger Index (SBI)</h1>
-    </div>
-    <p class="subtitle" id="subtitle">Measuring Solana's real-world flavor.</p>
-   </header>
-   <div class="main-content">
-    <div class="left-column">
-     <section class="main-metric">
-      <div class="metric-value" id="metric-value">
-       3.42
-      </div>
-      <div class="metric-label">
-       Burgers per 1 SOL
-      </div>
-      <p class="metric-description" id="index-description">The SOL-Burger Index tracks the purchasing power of Solana in burger units.</p>
-     </section>
-     <section class="info-cards">
-      <div class="card">
-       <h3 id="card1-title">What is the SBI</h3>
-       <p id="card1-text">A real-world metric measuring Solana's purchasing power in burger units.</p>
-      </div>
-      <div class="card">
-       <h3 id="card2-title">How it's calculated</h3>
-       <p id="card2-text">Current SOL price divided by average burger price ($8.50).</p>
-      </div>
-      <div class="card">
-       <h3 id="card3-title">Why it matters</h3>
-       <p id="card3-text">Makes crypto value tangible through everyday purchasing power.</p>
-      </div>
-     </section>
-    </div>
-    <div class="right-column">
-     <section class="chart-section">
-      <h2 class="chart-title">SOL vs Burgers Over Time</h2>
-      <div class="chart-container">
-       <canvas id="chart"></canvas>
-      </div>
-     </section>
-    </div>
+   <div class="header">
+    <h1 id="main-title">ZECT WORKERS FUND</h1>
+    <p class="subtitle" id="subtitle">Preserving privacy for those who build after hours.</p>
    </div>
-   <footer>
-    <p id="footer-text">Powered by Solana · Made for burger lovers and crypto realists.</p>
-   </footer>
+   <div class="main-content">
+    <div class="image-container"><img src="https://i.postimg.cc/L5R82PGr/Untitled-design-26.png" alt="ZECT Workers Fund Visual" id="main-image" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+    </div>
+    <p class="main-paragraph" id="main-paragraph">We represent individuals who live two lives. By day — professionals, employees, and builders. By night — traders, launchers, and creators of the absurd. We believe that anonymity is a form of safety. It protects freedom, creativity, and chaos — the roots of innovation.</p>
+    <div class="operations-section">
+     <h2 class="section-title" id="operations-title">How the Fund Operates</h2>
+     <p class="operations-text" id="operations-text">The ZECT Workers Fund operates through a decentralized network of anonymous contributions and mutual protection protocols. Every donation directly supports the maintenance of digital privacy infrastructure and protective measures for our members. We exist as a collective of individuals who understand that creative freedom requires the right to operate without exposure or professional consequence. Through anonymous channels and encrypted communications, we provide resources, legal support, and technological protection to those who build, create, and innovate in spaces that demand discretion.</p>
+    </div>
+   </div><button class="cta-button" id="cta-button">Apply for Protection</button>
+   <div class="footer">
+    <p id="footer-text">© 2025 ZECT WORKERS FUND. All rights reserved.<br>
+     Unregistered. Untraceable. Unstoppable.</p>
+   </div>
   </div>
   <script>
     const defaultConfig = {
-      main_title: "SOL-Burger Index (SBI)",
-      subtitle: "Measuring Solana's real-world flavor.",
-      index_description: "The SOL-Burger Index tracks the purchasing power of Solana in burger units.",
-      card1_title: "What is the SBI",
-      card1_text: "A real-world metric measuring Solana's purchasing power in burger units. It provides a tangible way to understand cryptocurrency value.",
-      card2_title: "How it's calculated",
-      card2_text: "Current SOL price divided by average burger price ($8.50). Updated regularly to reflect market conditions.",
-      card3_title: "Why it matters",
-      card3_text: "Makes crypto value tangible through everyday purchasing power. Bridges the gap between digital assets and real-world goods.",
-      footer_text: "Powered by Solana · Made for burger lovers and crypto realists.",
-      background_color: "#ffffff",
-      surface_color: "#fafafa",
-      text_color: "#1a1a1a",
-      border_color: "#e5e5e5",
-      secondary_text_color: "#666666",
-      font_family: "'Comic Sans MS', cursive, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif",
+      main_title: "ZECT WORKERS FUND",
+      subtitle: "Preserving privacy for those who build after hours.",
+      main_paragraph: "We represent individuals who live two lives. By day — professionals, employees, and builders. By night — traders, launchers, and creators of the absurd. We believe that anonymity is a form of safety. It protects freedom, creativity, and chaos — the roots of innovation.",
+      operations_title: "How the Fund Operates",
+      operations_text: "The ZECT Workers Fund operates through a decentralized network of anonymous contributions and mutual protection protocols. Every donation directly supports the maintenance of digital privacy infrastructure and protective measures for our members. We exist as a collective of individuals who understand that creative freedom requires the right to operate without exposure or professional consequence. Through anonymous channels and encrypted communications, we provide resources, legal support, and technological protection to those who build, create, and innovate in spaces that demand discretion.",
+      button_text: "Apply for Protection",
+      footer_text: "© 2025 ZECT WORKERS FUND. All rights reserved.\nUnregistered. Untraceable. Unstoppable.",
+      background_color: "#f8f9fa",
+      primary_color: "#34495e",
+      font_family: "Inter",
       font_size: 16
     };
 
     async function onConfigChange(config) {
-      const baseFontSize = config.font_size || defaultConfig.font_size;
-      const customFont = config.font_family || defaultConfig.font_family;
-      const baseFontStack = '"Comic Sans MS", cursive, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif';
-      const fontFamily = `${customFont}, ${baseFontStack}`;
+      const mainTitle = config.main_title || defaultConfig.main_title;
+      const subtitle = config.subtitle || defaultConfig.subtitle;
+      const mainParagraph = config.main_paragraph || defaultConfig.main_paragraph;
+      const operationsTitle = config.operations_title || defaultConfig.operations_title;
+      const operationsText = config.operations_text || defaultConfig.operations_text;
+      const buttonText = config.button_text || defaultConfig.button_text;
+      const footerText = config.footer_text || defaultConfig.footer_text;
+      const backgroundColor = config.background_color || defaultConfig.background_color;
+      const primaryColor = config.primary_color || defaultConfig.primary_color;
+      const fontFamily = config.font_family || defaultConfig.font_family;
+      const fontSize = config.font_size || defaultConfig.font_size;
 
-      document.body.style.fontFamily = fontFamily;
-      document.body.style.backgroundColor = config.background_color || defaultConfig.background_color;
-      document.body.style.color = config.text_color || defaultConfig.text_color;
-      document.body.style.fontSize = `${baseFontSize}px`;
+      document.getElementById('main-title').textContent = mainTitle;
+      document.getElementById('subtitle').textContent = subtitle;
+      document.getElementById('main-paragraph').textContent = mainParagraph;
+      document.getElementById('operations-title').textContent = operationsTitle;
+      document.getElementById('operations-text').textContent = operationsText;
+      document.getElementById('cta-button').textContent = buttonText;
+      document.getElementById('footer-text').innerHTML = footerText.replace(/\n/g, '<br>');
 
-      document.getElementById('main-title').textContent = config.main_title || defaultConfig.main_title;
-      document.getElementById('main-title').style.fontSize = `${baseFontSize * 2}px`;
-      document.getElementById('main-title').style.color = config.text_color || defaultConfig.text_color;
-
-      document.getElementById('subtitle').textContent = config.subtitle || defaultConfig.subtitle;
-      document.getElementById('subtitle').style.fontSize = `${baseFontSize * 1.125}px`;
-      document.getElementById('subtitle').style.color = config.secondary_text_color || defaultConfig.secondary_text_color;
-
-      const mainMetric = document.querySelector('.main-metric');
-      mainMetric.style.backgroundColor = config.surface_color || defaultConfig.surface_color;
-
-      document.getElementById('metric-value').style.fontSize = `${baseFontSize * 4}px`;
-      document.getElementById('metric-value').style.color = config.text_color || defaultConfig.text_color;
-
-      document.querySelector('.metric-label').style.fontSize = `${baseFontSize * 1.25}px`;
-      document.querySelector('.metric-label').style.color = config.secondary_text_color || defaultConfig.secondary_text_color;
-
-      document.getElementById('index-description').textContent = config.index_description || defaultConfig.index_description;
-      document.getElementById('index-description').style.fontSize = `${baseFontSize}px`;
-      document.getElementById('index-description').style.color = config.secondary_text_color || defaultConfig.secondary_text_color;
-
-      document.querySelector('.chart-title').style.fontSize = `${baseFontSize * 1.5}px`;
-      document.querySelector('.chart-title').style.color = config.text_color || defaultConfig.text_color;
-
-      const chartContainer = document.querySelector('.chart-container');
-      chartContainer.style.backgroundColor = config.surface_color || defaultConfig.surface_color;
-
-      document.getElementById('card1-title').textContent = config.card1_title || defaultConfig.card1_title;
-      document.getElementById('card1-text').textContent = config.card1_text || defaultConfig.card1_text;
-      document.getElementById('card2-title').textContent = config.card2_title || defaultConfig.card2_title;
-      document.getElementById('card2-text').textContent = config.card2_text || defaultConfig.card2_text;
-      document.getElementById('card3-title').textContent = config.card3_title || defaultConfig.card3_title;
-      document.getElementById('card3-text').textContent = config.card3_text || defaultConfig.card3_text;
-
-      const cards = document.querySelectorAll('.card');
-      cards.forEach(card => {
-        card.style.backgroundColor = config.surface_color || defaultConfig.surface_color;
-      });
-
-      const cardTitles = document.querySelectorAll('.card h3');
-      cardTitles.forEach(title => {
-        title.style.fontSize = `${baseFontSize * 1.25}px`;
-        title.style.color = config.text_color || defaultConfig.text_color;
-      });
-
-      const cardTexts = document.querySelectorAll('.card p');
-      cardTexts.forEach(text => {
-        text.style.fontSize = `${baseFontSize * 0.9375}px`;
-        text.style.color = config.secondary_text_color || defaultConfig.secondary_text_color;
-      });
-
-      document.getElementById('footer-text').textContent = config.footer_text || defaultConfig.footer_text;
-      document.querySelector('footer').style.fontSize = `${baseFontSize * 0.875}px`;
-
-      drawChart(config);
+      document.body.style.backgroundColor = backgroundColor;
+      document.body.style.fontFamily = `${fontFamily}, 'Helvetica Neue', Arial, sans-serif`;
+      
+      document.getElementById('main-title').style.color = primaryColor;
+      document.querySelector('.header').style.borderBottomColor = primaryColor;
+      document.getElementById('cta-button').style.backgroundColor = primaryColor;
+      document.getElementById('cta-button').style.borderColor = primaryColor;
+      document.querySelector('.section-title').style.color = primaryColor;
+      document.getElementById('main-paragraph').style.fontSize = `${fontSize * 1.125}px`;
+      document.getElementById('subtitle').style.fontSize = `${fontSize}px`;
+      document.getElementById('operations-title').style.fontSize = `${fontSize * 1.5}px`;
+      document.getElementById('operations-text').style.fontSize = `${fontSize}px`;
+      document.getElementById('cta-button').style.fontSize = `${fontSize}px`;
+      document.getElementById('footer-text').style.fontSize = `${fontSize * 0.75}px`;
     }
 
-    function drawChart(config) {
-      const canvas = document.getElementById('chart');
-      const ctx = canvas.getContext('2d');
-      
-      canvas.width = canvas.offsetWidth * window.devicePixelRatio;
-      canvas.height = canvas.offsetHeight * window.devicePixelRatio;
-      ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
-
-      const width = canvas.offsetWidth;
-      const height = canvas.offsetHeight;
-
-      ctx.clearRect(0, 0, width, height);
-
-      const data = [
-        { month: 'Jan', value: 2.1 },
-        { month: 'Feb', value: 2.4 },
-        { month: 'Mar', value: 2.8 },
-        { month: 'Apr', value: 2.6 },
-        { month: 'May', value: 3.1 },
-        { month: 'Jun', value: 3.5 },
-        { month: 'Jul', value: 3.2 },
-        { month: 'Aug', value: 3.7 },
-        { month: 'Sep', value: 3.4 },
-        { month: 'Oct', value: 3.9 },
-        { month: 'Nov', value: 3.6 },
-        { month: 'Dec', value: 3.42 }
-      ];
-
-      const padding = 50;
-      const chartWidth = width - padding * 2;
-      const chartHeight = height - padding * 2;
-
-      const maxValue = Math.max(...data.map(d => d.value));
-      const minValue = Math.min(...data.map(d => d.value));
-      const valueRange = maxValue - minValue;
-
-      const textColor = config.text_color || defaultConfig.text_color;
-      const secondaryTextColor = config.secondary_text_color || defaultConfig.secondary_text_color;
-      const borderColor = config.border_color || defaultConfig.border_color;
-
-      ctx.strokeStyle = borderColor;
-      ctx.lineWidth = 1;
-      ctx.beginPath();
-      ctx.moveTo(padding, padding);
-      ctx.lineTo(padding, height - padding);
-      ctx.lineTo(width - padding, height - padding);
-      ctx.stroke();
-
-      ctx.fillStyle = secondaryTextColor;
-      ctx.font = '12px sans-serif';
-      ctx.textAlign = 'right';
-      ctx.textBaseline = 'middle';
-
-      for (let i = 0; i <= 4; i++) {
-        const value = minValue + (valueRange * i / 4);
-        const y = height - padding - (chartHeight * i / 4);
-        ctx.fillText(value.toFixed(1), padding - 10, y);
-        
-        ctx.strokeStyle = borderColor;
-        ctx.globalAlpha = 0.3;
-        ctx.beginPath();
-        ctx.moveTo(padding, y);
-        ctx.lineTo(width - padding, y);
-        ctx.stroke();
-        ctx.globalAlpha = 1;
-      }
-
-      ctx.textAlign = 'center';
-      ctx.textBaseline = 'top';
-      data.forEach((point, index) => {
-        const x = padding + (chartWidth * index / (data.length - 1));
-        ctx.fillText(point.month, x, height - padding + 10);
-      });
-
-      ctx.strokeStyle = textColor;
-      ctx.lineWidth = 2;
-      ctx.beginPath();
-
-      data.forEach((point, index) => {
-        const x = padding + (chartWidth * index / (data.length - 1));
-        const normalizedValue = (point.value - minValue) / valueRange;
-        const y = height - padding - (chartHeight * normalizedValue);
-
-        if (index === 0) {
-          ctx.moveTo(x, y);
-        } else {
-          ctx.lineTo(x, y);
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ background_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.primary_color || defaultConfig.primary_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ primary_color: value });
+              }
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || defaultConfig.font_family,
+          set: (value) => {
+            if (window.elementSdk) {
+              window.elementSdk.setConfig({ font_family: value });
+            }
+          }
+        },
+        fontSizeable: {
+          get: () => config.font_size || defaultConfig.font_size,
+          set: (value) => {
+            if (window.elementSdk) {
+              window.elementSdk.setConfig({ font_size: value });
+            }
+          }
         }
-      });
+      };
+    }
 
-      ctx.stroke();
-
-      data.forEach((point, index) => {
-        const x = padding + (chartWidth * index / (data.length - 1));
-        const normalizedValue = (point.value - minValue) / valueRange;
-        const y = height - padding - (chartHeight * normalizedValue);
-
-        ctx.fillStyle = config.background_color || defaultConfig.background_color;
-        ctx.beginPath();
-        ctx.arc(x, y, 5, 0, Math.PI * 2);
-        ctx.fill();
-
-        ctx.strokeStyle = textColor;
-        ctx.lineWidth = 2;
-        ctx.beginPath();
-        ctx.arc(x, y, 5, 0, Math.PI * 2);
-        ctx.stroke();
-      });
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ["main_title", config.main_title || defaultConfig.main_title],
+        ["subtitle", config.subtitle || defaultConfig.subtitle],
+        ["main_paragraph", config.main_paragraph || defaultConfig.main_paragraph],
+        ["operations_title", config.operations_title || defaultConfig.operations_title],
+        ["operations_text", config.operations_text || defaultConfig.operations_text],
+        ["button_text", config.button_text || defaultConfig.button_text],
+        ["footer_text", config.footer_text || defaultConfig.footer_text]
+      ]);
     }
 
     if (window.elementSdk) {
       window.elementSdk.init({
         defaultConfig,
         onConfigChange,
-        mapToCapabilities: (config) => ({
-          recolorables: [
-            {
-              get: () => config.background_color || defaultConfig.background_color,
-              set: (value) => {
-                config.background_color = value;
-                window.elementSdk.setConfig({ background_color: value });
-              }
-            },
-            {
-              get: () => config.surface_color || defaultConfig.surface_color,
-              set: (value) => {
-                config.surface_color = value;
-                window.elementSdk.setConfig({ surface_color: value });
-              }
-            },
-            {
-              get: () => config.text_color || defaultConfig.text_color,
-              set: (value) => {
-                config.text_color = value;
-                window.elementSdk.setConfig({ text_color: value });
-              }
-            },
-            {
-              get: () => config.border_color || defaultConfig.border_color,
-              set: (value) => {
-                config.border_color = value;
-                window.elementSdk.setConfig({ border_color: value });
-              }
-            },
-            {
-              get: () => config.secondary_text_color || defaultConfig.secondary_text_color,
-              set: (value) => {
-                config.secondary_text_color = value;
-                window.elementSdk.setConfig({ secondary_text_color: value });
-              }
-            }
-          ],
-          borderables: [],
-          fontEditable: {
-            get: () => config.font_family || defaultConfig.font_family,
-            set: (value) => {
-              config.font_family = value;
-              window.elementSdk.setConfig({ font_family: value });
-            }
-          },
-          fontSizeable: {
-            get: () => config.font_size || defaultConfig.font_size,
-            set: (value) => {
-              config.font_size = value;
-              window.elementSdk.setConfig({ font_size: value });
-            }
-          }
-        }),
-        mapToEditPanelValues: (config) => new Map([
-          ["main_title", config.main_title || defaultConfig.main_title],
-          ["subtitle", config.subtitle || defaultConfig.subtitle],
-          ["index_description", config.index_description || defaultConfig.index_description],
-          ["card1_title", config.card1_title || defaultConfig.card1_title],
-          ["card1_text", config.card1_text || defaultConfig.card1_text],
-          ["card2_title", config.card2_title || defaultConfig.card2_title],
-          ["card2_text", config.card2_text || defaultConfig.card2_text],
-          ["card3_title", config.card3_title || defaultConfig.card3_title],
-          ["card3_text", config.card3_text || defaultConfig.card3_text],
-          ["footer_text", config.footer_text || defaultConfig.footer_text]
-        ])
+        mapToCapabilities,
+        mapToEditPanelValues
       });
     }
-
-    window.addEventListener('resize', () => {
-      if (window.elementSdk && window.elementSdk.config) {
-        drawChart(window.elementSdk.config);
-      }
-    });
-
-    drawChart(defaultConfig);
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'999ea206661dc704',t:'MTc2MjM2OTYzNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99a55546e5fcbc1c',t:'MTc2MjQzOTg5MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
